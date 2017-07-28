@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: service-B
+  profiles: 
+    active: dev
+  cloud:
+    config:
+      discovery: 
+        enabled: true
+        service-id: nuke-commonservice-config-server
+eureka: 
+  client:
+    service-url:
+      defaultZone: http://dcop:123456@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
